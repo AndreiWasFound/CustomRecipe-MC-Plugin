@@ -2,3 +2,4 @@ main: me.AndreiWasFound.CustomRecipe.Main
 author: AndreiWasFound
 name: CustomRecipe
 version: 1.0
+api-version: 1.13

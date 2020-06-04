@@ -18,34 +18,19 @@ public class Main extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		Bukkit.addRecipe(getRecipe());
 		Bukkit.addRecipe(getEmeraldPickaxeRecipe());
 		Bukkit.addRecipe(getEmeraldBlockPickaxeRecipe());
 		Bukkit.addRecipe(getNetherStarRecipe());
+		Bukkit.addRecipe(getLapisLazuliPickaxeRecipe());
+		Bukkit.addRecipe(getLapisLazuliBlockPickaxeRecipe());
+		Bukkit.addRecipe(getRedstonePickaxeRecipe());
 	}
 
 	@Override
 	public void onDisable() {
 
 	}
-	
-	public ShapedRecipe getRecipe() {
 		
-		ItemStack item1 = new ItemStack(Material.NETHER_STAR);
-		
-		NamespacedKey key1 = new NamespacedKey(this, "nether_star");
-		
-		ShapedRecipe recipe1 = new ShapedRecipe(key1, item1);
-		
-		recipe1.shape(" T ", "TET", " T ");
-		
-		recipe1.setIngredient('T', Material.GHAST_TEAR);
-		recipe1.setIngredient('E', Material.EMERALD_BLOCK);
-		
-		
-		return recipe1;
-	}
-	
 	public ShapedRecipe getEmeraldPickaxeRecipe() {
 		
 		ItemStack item2 = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -53,6 +38,10 @@ public class Main extends JavaPlugin {
 		
 		meta1.setDisplayName(ChatColor.GREEN + "Emerald Pickaxe");
 		meta1.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 10, true);
+		List<String> lore1 = new ArrayList<String>();
+		lore1.add(ChatColor.translateAlternateColorCodes('&', "&7Fortune 10"));
+		meta1.setLore(lore1);
+		meta1.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		
 		item2.setItemMeta(meta1);
 		
@@ -123,9 +112,9 @@ public class Main extends JavaPlugin {
 		
 		ShapedRecipe recipe4 = new ShapedRecipe(key4, item4);
 		
-		recipe4.shape("NNN", " S ", " S ");
+		recipe4.shape("NNN", " B ", " B ");
 		
-		recipe4.setIngredient('S', Material.STICK);
+		recipe4.setIngredient('B', Material.BLAZE_ROD);
 		recipe4.setIngredient('N', Material.NETHER_STAR);
 		
 		
@@ -133,5 +122,93 @@ public class Main extends JavaPlugin {
 
 	}
 	
+	
+	public ShapedRecipe getLapisLazuliPickaxeRecipe() {
+		
+		ItemStack item5 = new ItemStack(Material.IRON_PICKAXE);
+		ItemMeta meta3 = item5.getItemMeta();
+		
+		meta3.setDisplayName(ChatColor.DARK_BLUE + "Lapis Lazuli Pickaxe");
+		meta3.addEnchant(Enchantment.DIG_SPEED, 5, true);
+		List<String> lore3 = new ArrayList<String>();
+		lore3.add(ChatColor.translateAlternateColorCodes('&', "&7Efficiency 5"));
+		meta3.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta3.setLore(lore3);
+		
+		item5.setItemMeta(meta3);
+		
+		NamespacedKey key4 = new NamespacedKey(this, "lapis_lazuli_pickaxe");
+		
+		ShapedRecipe recipe5 = new ShapedRecipe(key4, item5);
+		
+		recipe5.shape("LLL", " S ", " S ");
+		
+		recipe5.setIngredient('S', Material.STICK);
+		recipe5.setIngredient('L', Material.LAPIS_LAZULI);
+		
+		
+		return recipe5;
+
+	}
+	
+	public ShapedRecipe getLapisLazuliBlockPickaxeRecipe() {
+		
+		ItemStack item5 = new ItemStack(Material.IRON_PICKAXE);
+		ItemMeta meta3 = item5.getItemMeta();
+		
+		meta3.setDisplayName(ChatColor.DARK_BLUE + "Lapis Lazuli Block Pickaxe");
+		meta3.addEnchant(Enchantment.DIG_SPEED, 5, true);
+		meta3.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 3, true);
+		meta3.addEnchant(Enchantment.DURABILITY, 3, true);
+		List<String> lore3 = new ArrayList<String>();
+		lore3.add(ChatColor.translateAlternateColorCodes('&', "&7Efficiency 5"));
+		lore3.add(ChatColor.translateAlternateColorCodes('&', "&7Fortune 3"));
+		lore3.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 3"));
+		meta3.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta3.setLore(lore3);
+		
+		item5.setItemMeta(meta3);
+		
+		NamespacedKey key4 = new NamespacedKey(this, "lapis_lazuli_block_pickaxe");
+		
+		ShapedRecipe recipe5 = new ShapedRecipe(key4, item5);
+		
+		recipe5.shape("LLL", " S ", " S ");
+		
+		recipe5.setIngredient('S', Material.STICK);
+		recipe5.setIngredient('L', Material.LAPIS_BLOCK);
+		
+		
+		return recipe5;
+
+	}
+	public ShapedRecipe getRedstonePickaxeRecipe() {
+		
+		ItemStack item5 = new ItemStack(Material.STONE_PICKAXE);
+		ItemMeta meta3 = item5.getItemMeta();
+		
+		meta3.setDisplayName(ChatColor.RED + "Redstone Pickaxe");
+		meta3.addEnchant(Enchantment.DIG_SPEED, 15, true);
+		meta3.addEnchant(Enchantment.DURABILITY, 1, true);
+		List<String> lore3 = new ArrayList<String>();
+		lore3.add(ChatColor.translateAlternateColorCodes('&', "&7Efficiency 15"));
+		meta3.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta3.setLore(lore3);
+		
+		item5.setItemMeta(meta3);
+		
+		NamespacedKey key4 = new NamespacedKey(this, "redstone_pickaxe");
+		
+		ShapedRecipe recipe5 = new ShapedRecipe(key4, item5);
+		
+		recipe5.shape("RRR", " S ", " S ");
+		
+		recipe5.setIngredient('S', Material.STICK);
+		recipe5.setIngredient('R', Material.REDSTONE);
+		
+		
+		return recipe5;
+
+	}
 }
 	
