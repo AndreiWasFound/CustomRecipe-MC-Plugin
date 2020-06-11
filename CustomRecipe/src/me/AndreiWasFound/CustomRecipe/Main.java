@@ -24,6 +24,13 @@ public class Main extends JavaPlugin {
 		Bukkit.addRecipe(getLapisLazuliPickaxeRecipe());
 		Bukkit.addRecipe(getLapisLazuliBlockPickaxeRecipe());
 		Bukkit.addRecipe(getRedstonePickaxeRecipe());
+		Bukkit.addRecipe(getDiamondShieldOakPlanksRecipe());
+		Bukkit.addRecipe(getDiamondShieldSprucePlanksRecipe());
+		Bukkit.addRecipe(getDiamondShieldJunglePlanksRecipe());
+		Bukkit.addRecipe(getDiamondShieldDarkOakPlanksRecipe());
+		Bukkit.addRecipe(getDiamondShieldBirchPlanksRecipe());
+		Bukkit.addRecipe(getDiamondShieldAcaciaPlanksRecipe());
+		Bukkit.addRecipe(getObsidianPickaxeRecipe());
 	}
 
 	@Override
@@ -208,6 +215,198 @@ public class Main extends JavaPlugin {
 		
 		
 		return recipe5;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldOakPlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_oak_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.OAK_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldSprucePlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_spruce_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.SPRUCE_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldJunglePlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_jungle_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.JUNGLE_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldDarkOakPlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_dark_oak_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.DARK_OAK_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldBirchPlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_birch_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.BIRCH_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getDiamondShieldAcaciaPlanksRecipe() {
+		
+		ItemStack item = new ItemStack(Material.SHIELD);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.AQUA + "Diamond Shield");
+		meta.addEnchant(Enchantment.DURABILITY, 15, true);
+		List<String> lore = new ArrayList<String>();
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Unbreaking 15"));
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.setLore(lore);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "diamond_shield_acacia_planks");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("PDP", "PPP", " P ");
+		
+		recipe.setIngredient('P', Material.ACACIA_PLANKS);
+		recipe.setIngredient('D', Material.DIAMOND);
+		
+		
+		return recipe;
+
+	}
+	
+	public ShapedRecipe getObsidianPickaxeRecipe() {
+		
+		ItemStack item = new ItemStack(Material.DIAMOND_PICKAXE);
+		ItemMeta meta = item.getItemMeta();
+		
+		meta.setDisplayName(ChatColor.DARK_GRAY + "Obsidian Pickaxe");
+		meta.setUnbreakable(true);
+		
+		item.setItemMeta(meta);
+		
+		NamespacedKey key = new NamespacedKey(this, "obsidian_pickaxe");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("OOO", " S ", " S ");
+		
+		recipe.setIngredient('S', Material.STICK);
+		recipe.setIngredient('O', Material.OBSIDIAN);
+		
+		
+		return recipe;
 
 	}
 }
